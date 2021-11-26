@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_lists",
+  "info": {
+    "name": "project_list",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_name": {
+      "type": "string",
+      "required": true
+    },
+    "product": {
+      "type": "string",
+      "required": true
+    },
+    "part": {
+      "type": "string"
+    },
+    "machine_lists": {
+      "via": "project_list",
+      "collection": "machine-list"
+    }
+  }
+}

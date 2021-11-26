@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "machine_lists",
+  "info": {
+    "name": "machine_list",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "machine_name": {
+      "type": "string",
+      "required": true
+    },
+    "project_list": {
+      "via": "machine_lists",
+      "model": "project-list"
+    },
+    "machine_index": {
+      "type": "integer",
+      "required": true,
+      "unique": false
+    }
+  }
+}

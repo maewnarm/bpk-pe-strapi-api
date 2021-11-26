@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/machine-lists",
+      "handler": "machine-list.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/machine-lists/count",
+      "handler": "machine-list.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/machine-lists/:id",
+      "handler": "machine-list.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/machine-lists",
+      "handler": "machine-list.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/machine-lists/:id",
+      "handler": "machine-list.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/machine-lists/:id",
+      "handler": "machine-list.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
