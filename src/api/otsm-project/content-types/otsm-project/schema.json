@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "otsm_projects",
+  "info": {
+    "singularName": "otsm-project",
+    "pluralName": "otsm-projects",
+    "displayName": "otsm_project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_name": {
+      "type": "string"
+    },
+    "product": {
+      "type": "string"
+    },
+    "part": {
+      "type": "string"
+    },
+    "otsm_machines": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::otsm-machine.otsm-machine",
+      "mappedBy": "otsm_project"
+    }
+  }
+}

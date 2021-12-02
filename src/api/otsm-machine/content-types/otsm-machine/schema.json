@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "otsm_machines",
+  "info": {
+    "singularName": "otsm-machine",
+    "pluralName": "otsm-machines",
+    "displayName": "otsm_machine"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "machine_name": {
+      "type": "string"
+    },
+    "machine_index": {
+      "type": "integer"
+    },
+    "otsm_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::otsm-project.otsm-project",
+      "inversedBy": "otsm_machines"
+    }
+  }
+}
