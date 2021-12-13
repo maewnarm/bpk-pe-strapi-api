@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "machines",
+  "info": {
+    "singularName": "machine",
+    "pluralName": "machines",
+    "displayName": "machine",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "no": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "index": {
+      "type": "integer",
+      "required": false
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Assembly",
+        "Lathe",
+        "Welding",
+        "Caulking"
+      ],
+      "required": true
+    },
+    "line": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::line.line",
+      "inversedBy": "machines"
+    }
+  }
+}

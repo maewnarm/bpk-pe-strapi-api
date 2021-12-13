@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lines",
+  "info": {
+    "singularName": "line",
+    "pluralName": "lines",
+    "displayName": "line",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "section_code": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "wc_code": {
+      "type": "string",
+      "required": true
+    },
+    "part": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::part.part",
+      "inversedBy": "lines"
+    },
+    "machines": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::machine.machine",
+      "mappedBy": "line"
+    }
+  }
+}

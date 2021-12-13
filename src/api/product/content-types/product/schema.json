@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "short": {
+      "type": "string",
+      "required": true
+    },
+    "parts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::part.part",
+      "mappedBy": "product"
+    }
+  }
+}
