@@ -20,6 +20,12 @@
       "type": "string",
       "required": true
     },
+    "model": {
+      "type": "string"
+    },
+    "customer": {
+      "type": "string"
+    },
     "product": {
       "type": "relation",
       "relation": "manyToOne",

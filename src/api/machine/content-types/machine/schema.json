@@ -40,6 +40,16 @@
       "relation": "manyToOne",
       "target": "api::line.line",
       "inversedBy": "machines"
+    },
+    "mt": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "ht": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
     }
   }
 }
